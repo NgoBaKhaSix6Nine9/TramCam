@@ -28,7 +28,8 @@ function account(tk, mk, sex,ho,ten) {         // Hàm khởi tạo
   
 //   var p1 = new account("minelady92@gmail.com",2,3,4,6); 
 //   arr_acc.push(p1)
-  
+//   localStorage.setItem("arr_account", JSON.stringify(arr_acc));
+
 function add_arr(){
     var sex="Nữ"
     if (rd_nam.checked==true)

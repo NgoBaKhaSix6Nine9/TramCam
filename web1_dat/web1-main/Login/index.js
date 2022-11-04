@@ -60,10 +60,12 @@ function dangnhap(){
     
     if (val_mk=="" || val_tk=="" || checkEmail()==false)
     {
+        console.log("cc");
         erro_login[0].style.display="block"
     }
-    else if(check_login()){
-       alert("CHUYỂN SANG TRANG CHỦ")
+    else if(check_login()==true){
+        window.location.href="../account/index.html"
+      
     }
 }
 
@@ -75,7 +77,12 @@ function check_login(){
     {
         if(val_tk==arr_account_local[i].tk && val_mk==arr_account_local[i].mk)
         {
+            localStorage.removeItem('current_account');
+            localStorage.setItem("current_account", JSON.stringify(arr_account_local[i]));
+          
             return true
+          
+            
         }
        
         
